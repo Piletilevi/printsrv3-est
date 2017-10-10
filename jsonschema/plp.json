@@ -1,0 +1,566 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plp.json",
+    "title": "PiletiLevi Printing",
+    "description": "Tickets and fiscal data from backoffice to POS",
+    "type": "object",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/cut"
+        },
+        {
+            "$ref": "#/definitions/endShift"
+        },
+        {
+            "$ref": "#/definitions/feed"
+        },
+        {
+            "$ref": "#/definitions/insertCash"
+        },
+        {
+            "$ref": "#/definitions/openCashReg"
+        },
+        {
+            "$ref": "#/definitions/refund"
+        },
+        {
+            "$ref": "#/definitions/sale"
+        },
+        {
+            "$ref": "#/definitions/startShift"
+        },
+        {
+            "$ref": "#/definitions/withdrawCash"
+        },
+        {
+            "$ref": "#/definitions/xReport"
+        }
+    ],
+    "properties": {
+        "plpVersion": {
+            "type": "string"
+        },
+        "feedbackToken": {
+            "type": "string"
+        },
+        "feedbackUrl": {
+            "type": "string"
+        },
+        "busnId": {
+            "type": "string"
+        },
+        "printingDriverVersion": {
+            "type": "string"
+        },
+        "printingDriverVersionURL": {
+            "type": "string"
+        },
+        "salesPointText": {
+            "type": "string"
+        },
+        "salesPointCountry": {
+            "type": "string"
+        },
+        "salesPoint": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "plpVersion",
+        "printingDriverVersion",
+        "salesPointCountry"
+    ],
+    "definitions": {
+        "component": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number"
+                },
+                "cost": {
+                    "type": "number"
+                },
+                "kkm": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "ticketId": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "vatGroup": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "amount",
+                "cost",
+                "kkm",
+                "name",
+                "type",
+                "vatGroup"
+            ],
+            "additionalProperties": false
+        },
+        "cut": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "cut"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "operation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "endShift": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "endshift"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "operation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "feed": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "feed"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "operation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "fiscalData": {
+            "type": "object",
+            "properties": {
+                "businessTransactionId": {
+                  "type": "string"
+                },
+                "cardPaymentUnitSettings": {
+                    "type": "object",
+                    "properties": {
+                        "cardPaymentUnit": { "type": "string" },
+                        "cardPaymentSettingXml": { "type": "string" },
+                        "cardPaymentSettingIp": { "type": "string" },
+                        "cardPaymentSettingPort": { "type": "string" }
+                    },
+                    "required": [
+                        "cardPaymentUnit","cardPaymentSettingIp","cardPaymentSettingPort"
+                    ]
+                },
+                "printerData": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "fiscal"
+                            ]
+                        },
+                        "printerName": {
+                            "type": "string"
+                        },
+                        "printerRegNumber": {
+                            "type": "string"
+                        },
+                        "comPortNumber": {
+                            "type": "integer"
+                        },
+                        "comPortBaudRate": {
+                            "type": "integer"
+                        },
+                        "readTimeout": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "exclusiveMinimum": true
+                        },
+                        "writeTimeout": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "exclusiveMinimum": true
+                        },
+                        "adminPw": {
+                            "type": "string"
+                        },
+                        "cashierPw": {
+                            "type": "string"
+                        },
+                        "adminPw": {
+                            "type": "string"
+                        },
+                        "sysAdminPw": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "printerName"
+                    ]
+                },
+                "cashAmount": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "printerData", "businessTransactionId", "operation"
+            ]
+        },
+        "insertCash": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "insertcash"
+                                    ]
+                                },
+                                "cashAmount": {
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "exclusiveMinimum": true
+                                }
+                            },
+                            "required": [
+                                "operation",
+                                "cashAmount"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "openCashReg": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "opencashreg"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "operation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "payment": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "cost": {
+                    "type": "number",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                },
+                "components": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "$ref": "#/definitions/component"
+                    }
+                }
+            },
+            "required": [
+                "type",
+                "name",
+                "cost",
+                "components"
+            ],
+            "additionalProperties": false
+        },
+        "refund": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "refund"
+                                    ]
+                                },
+                                "payments": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/payment"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "operation",
+                                "payments"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "sale": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "sale"
+                                    ]
+                                },
+                                "payments": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/payment"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "operation",
+                                "payments"
+                            ]
+                        }
+                    ]
+                },
+                "ticketData": {
+                    "$ref": "#/definitions/ticketData"
+                }
+            },
+            "anyOf": [
+                {
+                    "required": [
+                        "fiscalData"
+                    ]
+                },
+                {
+                    "required": [
+                        "ticketData"
+                    ]
+                }
+            ]
+        },
+        "startShift": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "startshift"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "operation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "ticketData": {
+            "type": "object",
+            "properties": {
+                "tickets": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    }
+                },
+                "printerData": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "tickets"
+                            ]
+                        },
+                        "printerName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "printerName"
+                    ]
+                }
+            },
+            "required": [
+                "tickets",
+                "printerData"
+            ]
+        },
+        "withdrawCash": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "withdrawcash"
+                                    ]
+                                },
+                                "cashAmount": {
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "exclusiveMinimum": true
+                                }
+                            },
+                            "required": [
+                                "operation",
+                                "cashAmount"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        },
+        "xReport": {
+            "type": "object",
+            "properties": {
+                "fiscalData": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/fiscalData"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "xreport"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "operation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "fiscalData"
+            ]
+        }
+    }
+}

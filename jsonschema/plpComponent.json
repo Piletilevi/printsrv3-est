@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plpComponent.json",
+    "type": "object",
+    "properties": {
+        "amount": {
+            "type": "number"
+        },
+        "cost": {
+            "type": "number"
+        },
+        "kkm": {
+            "type": "boolean"
+        },
+        "name": {
+            "type": "string"
+        },
+        "ticketId": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "vatGroup": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "amount",
+        "cost",
+        "kkm",
+        "name",
+        "type",
+        "vatGroup"
+    ],
+    "additionalProperties": false
+}

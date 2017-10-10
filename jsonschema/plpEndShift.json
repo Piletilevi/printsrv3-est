@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plpEndShift.json",
+    "type": "object",
+    "properties": {
+        "fiscalData": {
+            "allOf": [
+                {
+                    "$ref": "plpFiscalData.json"
+                },
+                {
+                    "properties": {
+                        "operation": {
+                            "type": "string",
+                            "enum": [
+                                "endshift"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "operation"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "fiscalData"
+    ]
+}

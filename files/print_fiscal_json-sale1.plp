@@ -1,0 +1,115 @@
+{
+  "plpVersion": "2.0.0",
+  "feedbackToken": "hHpkdjggNiaOildrdajNCNjillWWcKjk",
+  "feedbackUrl": "http:\/\/bo.piletilevi-ru.test.helmes.ee\/cgi-bin\/wspd_cgi.sh\/WService=plevi\/proc\/myygikorv.p?ajax=feedback",
+  "printingDriverVersion": "",
+  "printingDriverVersionUrl": "",
+  "salesPointText": "Müügipunkt:",
+  "salesPointCountry": "Valgevene",
+  "salesPoint": "* Беларусь BO",
+  "transactionDateTime": "25.05.2017 11:30",
+  "ticketData": {
+    "printerData": {
+      "type": "tickets",
+      "printerName": "Godex DT4x"
+    },
+    "tickets": [
+      {
+        "ticketId": "137124437",
+        "ticketBarCode": "23450204437294",
+        "eventName1": "БИ-2",
+        "eventName2": "",
+        "eventLocation": "МКСК Минск-Арена",
+        "eventDateTime": "ПЯТНИЦА 02.06.17  Время 19:00",
+        "infoText1": "г. Минск, проспект Победителей, 111",
+        "infoText2": "",
+        "infoText3": "Телефон bileti.by: +375 29 650 9999",
+        "infoText4": "Организатор: ООО Артист ПРО",
+        "infoText5": "г. Минск, ул. Интернациональная 16, 301 каб",
+        "infoTextPdf": "",
+        "section1": "Трибуна А. Сектор F",
+        "section2": "Трибуна А. Сек",
+        "row1": "RIDA 8",
+        "row2": "R 8",
+        "seat1": "KOHT 11",
+        "seat2": "K 11",
+        "priceGroup1": "цена",
+        "priceGroup2": "ц",
+        "ticketPrice": "0.01 РУБ",
+        "serviceFee": "Müügipunkti teenustasu 1.50 РУБ",
+        "extraFee": "Lisateenused 1.50 РУБ",
+        "totalText": "KOKKU",
+        "totalPrice": "3.01 РУБ",
+        "imageTop": "http:\/\/images.piletilevi.ee\/tickets\/top_1254993077_ylemine.jpg",
+        "imageLeft": "http:\/\/images.piletilevi.ee\/tickets\/left_1495522894_left_image.jpg",
+        "imageBottom": "http:\/\/images.piletilevi.ee\/tickets\/bottom_1254993107_alumine.jpg",
+        "saleDateTime": "25.05.2017 11:30"
+      }
+    ]
+  },
+  "fiscalData": {
+    "operation": "sale",
+    "businessTransactionId": "10000001",
+    "cardPaymentUnitSettings": {
+      "cardPaymentUnit": "Ingenico",
+      "cardPaymentUnitXml": "PosXML 7.2.0",
+      "cardPaymentUnitIp": "192.168.2.45",
+      "cardPaymentUnitPort": "4445"
+    },
+    "printerData": {
+      "type": "fiscal",
+      "printerName": "ШТРИХ-ФР-К (B.2)",
+      "printerRegNumber": "123456",
+      "comPortNumber": 5,
+      "comPortBaudRate": 115200,
+      "readTimeout": 30,
+      "writeTimeout": 30,
+      "adminPw": "29000",
+      "cashierPw": "1000",
+      "certUserPw": "",
+      "sysAdminPw": "30000"
+    },
+    "payments": [
+      {
+        "type": "4",
+        "name": "Card payment",
+        "cost": 0.01,
+        "components": [
+          {
+            "amount": 1,
+            "cost": 0.01,
+            "kkm": true,
+            "name": "Pilet",
+            "ticketId": "137124437",
+            "type": "Piletid",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 1,
+            "cost": 0,
+            "kkm": true,
+            "name": "Müügipunkti teenustasu",
+            "type": "Teenustasu",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 1,
+            "cost": 0.0,
+            "kkm": true,
+            "name": "Tagastatav lisatasu",
+            "type": "Lisatasud",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 1,
+            "cost": 0,
+            "kkm": true,
+            "name": "Mittetagastatav lisatasu",
+            "type": "Lisatasud",
+            "vatGroup": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

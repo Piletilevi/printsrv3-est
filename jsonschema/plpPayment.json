@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plpPayment.json",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "cost": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "components": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "plpComponent.json"
+            }
+        }
+    },
+    "required": [
+        "type",
+        "name",
+        "cost",
+        "components"
+    ],
+    "additionalProperties": false
+}

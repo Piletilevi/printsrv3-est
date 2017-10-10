@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plpTicketData.json",
+    "type": "object",
+    "properties": {
+        "tickets": {
+            "type": "array",
+            "items": {"type":"object"}
+        },
+        "printerData": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "ticket"
+                    ]
+                },
+                "printerName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type", "printerName"
+            ]
+        }
+    },
+    "required": ["tickets","printerData"]
+}

@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plpFiscalData.json",
+    "type": "object",
+    "properties": {
+        "cardPaymentUnitSettings": {
+            "type": "object",
+            "properties": {
+                "cardPaymentUnit": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cardPaymentUnit"
+            ]
+        },
+        "printerData": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "fiscal"
+                    ]
+                },
+                "printerName": {
+                    "type": "string"
+                },
+                "printerRegNumber": {
+                    "type": "string"
+                },
+                "comPortNumber": {
+                    "type": "integer"
+                },
+                "comPortBaudRate": {
+                    "type": "integer"
+                },
+                "readTimeout": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                },
+                "writeTimeout": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                },
+                "adminPw": {
+                    "type": "string"
+                },
+                "cashierPw": {
+                    "type": "string"
+                },
+                "certUserPw": {
+                    "type": "string"
+                },
+                "sysAdminPw": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type",
+                "printerName"
+            ]
+        },
+        "cashAmount": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "printerData"
+    ]
+}

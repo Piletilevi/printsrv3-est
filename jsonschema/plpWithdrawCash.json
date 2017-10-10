@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/Piletilevi/printsrv/json/jsonschema/plpWithdrawCash.json",
+    "type": "object",
+    "properties": {
+        "fiscalData": {
+            "allOf": [
+                {
+                    "$ref": "plpFiscalData.json"
+                },
+                {
+                    "properties": {
+                        "operation": {
+                            "type": "string",
+                            "enum": [
+                                "withdrawcash"
+                            ]
+                        },
+                        "cashAmount": {
+                            "type": "number",
+                            "minimum": 0,
+                            "exclusiveMinimum": true
+                        }
+                    },
+                    "required": [
+                        "operation",
+                        "cashAmount"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "fiscalData"
+    ]
+}

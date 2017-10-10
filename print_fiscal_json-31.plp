@@ -1,0 +1,86 @@
+{
+  "plpVersion": "2.0.0",
+  "feedbackToken": "baHmcZhpjNDzmEkfbUeafjbBmAbifaRl",
+  "feedbackUrl": "http:\/\/bo.piletilevi-ru.test.helmes.ee\/cgi-bin\/wspd_cgi.sh\/WService=plevi\/proc\/myygikorv.p?ajax=feedback",
+  "printingDriverVersion": "",
+  "printingDriverVersionUrl": "",
+  "salesPointText": "Müügipunkt:",
+  "salesPointCountry": "Valgevene",
+  "salesPoint": "* Беларусь BO",
+  "transactionDateTime": "24.05.2017 14:53",
+  "fiscalData": {
+    "operation": "refund",
+    "businessTransactionId": "13783374",
+    "saleTransactionId": "13783366,13783351",
+    "cardPaymentUnitSettings": {
+      "cardPaymentUnit": "Ingenico",
+      "cardPaymentUnitXml": "PosXML 7.2.0",
+      "cardPaymentUnitIp": "192.168.2.45",
+      "cardPaymentUnitPort": "4445"
+    },
+    "printerData": {
+      "type": "fiscal",
+      "printerName": "ШТРИХ-ФР-К (B.2)",
+      "printerRegNumber": "123456",
+      "comPortNumber": 5,
+      "comPortBaudRate": 115200,
+      "readTimeout": 30,
+      "writeTimeout": 30,
+      "adminPw": "29000",
+      "cashierPw": "1000",
+      "certUserPw": "",
+      "sysAdminPw": "30000"
+    },
+    "payments": [
+      {
+        "type": "1",
+        "name": "Наличные деньги",
+        "cost": 115.01,
+        "components": [
+          {
+            "amount": 1,
+            "cost": 0.01,
+            "kkm": true,
+            "name": "Pilet",
+            "ticketId": "133781110",
+            "type": "Piletid",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 1,
+            "cost": 109.0,
+            "kkm": true,
+            "name": "Pilet",
+            "ticketId": "133781113",
+            "type": "Piletid",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 2,
+            "cost": 1.5,
+            "kkm": true,
+            "name": "Müügipunkti teenustasu",
+            "type": "Teenustasu",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 2,
+            "cost": 1.0,
+            "kkm": true,
+            "name": "Tagastatav lisatasu",
+            "type": "Lisatasud",
+            "vatGroup": "0"
+          },
+          {
+            "amount": 2,
+            "cost": 0.5,
+            "kkm": true,
+            "name": "Mittetagastatav lisatasu",
+            "type": "Lisatasud",
+            "vatGroup": "0"
+          }
+        ]
+      }
+    ]
+  }
+}
