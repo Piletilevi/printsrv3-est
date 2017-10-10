@@ -1,11 +1,12 @@
 # printsrv
-Ticket printer driver  
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6e27ab962edd41e380c34a5189afa328)](https://www.codacy.com/app/mihkel-putrinsh/printsrv3?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Piletilevi/printsrv3&amp;utm_campaign=Badge_Grade)
+Ticket printer driver for Estonian deployments
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6e27ab962edd41e380c34a5189afa328)](https://www.codacy.com/app/mihkel-putrinsh/printsrv3-est?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Piletilevi/printsrv3-est&amp;utm_campaign=Badge_Grade)
 
 
 ### Installation  
 
-Download and extract [plevi.zip](https://github.com/Piletilevi/printsrv3/releases/latest) to c:\plevi folder  
+Download and extract [plevi.zip](https://github.com/Piletilevi/printsrv3-est/releases/latest) to c:\plevi folder  
 
 
 ### Configuration
@@ -25,4 +26,3 @@ Even better
 
 Thank us later.  
 M-O-O-R
-

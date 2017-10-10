@@ -9,9 +9,8 @@
   "salesPoint": "* Беларусь BO",
   "transactionDateTime": "24.05.2017 14:53",
   "fiscalData": {
-    "operation": "refund",
+    "operation": "sale",
     "businessTransactionId": "13783374",
-    "saleTransactionId": "13783366,13783351",
     "cardPaymentUnitSettings": {
       "cardPaymentUnit": "Ingenico",
       "cardPaymentUnitXml": "PosXML 7.2.0",
@@ -33,9 +32,9 @@
     },
     "payments": [
       {
-        "type": "1",
+        "type": "4",
         "name": "Наличные деньги",
-        "cost": 115.01,
+        "cost": 1.01,
         "components": [
           {
             "amount": 1,
@@ -48,7 +47,7 @@
           },
           {
             "amount": 1,
-            "cost": 109.0,
+            "cost": 0.09,
             "kkm": true,
             "name": "Pilet",
             "ticketId": "133781113",
@@ -57,7 +56,7 @@
           },
           {
             "amount": 2,
-            "cost": 1.5,
+            "cost": 0.15,
             "kkm": true,
             "name": "Müügipunkti teenustasu",
             "type": "Teenustasu",

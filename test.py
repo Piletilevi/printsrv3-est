@@ -5,9 +5,12 @@ import time
 
 # def callback(source, message):
 #     print('{0}: {1}'.format(source, message))
+
+
 def callback(filename, lines):
     for line in lines:
         print('{0}: {1}'.format(filename, line))
+
 
 watcher = LogWatcher('upos', callback)
 
