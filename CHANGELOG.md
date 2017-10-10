@@ -12,6 +12,7 @@
 
 ...
 
+
 ### 1.0.0-rc1 Release candidate
 - 30/08/2016, Mihkel Putrinš
 
