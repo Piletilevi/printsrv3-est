@@ -33,6 +33,7 @@ def ordered_load(stream, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
 
 class PSPrint:
     def __init__(self, feedback, bye, plp_json_data):
+        print('init the print')
         self.feedback = feedback
         self.bye = bye
         self.PLP_JDATA = plp_json_data

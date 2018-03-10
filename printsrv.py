@@ -185,18 +185,21 @@ def cmsale():
 
 init()
 
-if PLP_JSON_DATA.get('fiscalData', {}).get('payments', []):
-    try:
-        cmsale()
-    except Exception as e:
-        bye("Unexpected fiscal error: {0}".format(e))
+# if PLP_JSON_DATA.get('fiscalData', {}).get('payments', []):
+#     try:
+#         cmsale()
+#     except Exception as e:
+#         bye("Unexpected fiscal error: {0}".format(e))
+#     print('Sold')
 
 if PLP_JSON_DATA.get('ticketData', {}):
+    print('Printing')
     try:
         from PSPrint import PSPrint
         with PSPrint(feedback, bye, PLP_JSON_DATA) as ps:
             ps.printTickets()
     except Exception as e:
         bye("Unexpected printer error: {0}".format(e))
+    print('Printed')
 
 bye()

@@ -8,6 +8,45 @@
   "salesPointCountry": "Valgevene",
   "salesPoint": "* Беларусь BO",
   "transactionDateTime": "24.05.2017 14:53",
+  "ticketData": {
+    "printerData": {
+      "type": "tickets",
+      "printerName": "Godex DT4x"
+    },
+    "tickets": [
+      {
+        "ticketId": "137124437",
+        "ticketBarCode": "23450204437294",
+        "eventName1": "БИ-2",
+        "eventName2": "",
+        "eventLocation": "МКСК Минск-Арена",
+        "eventDateTime": "ПЯТНИЦА 02.06.17  Время 19:00",
+        "infoText1": "г. Минск, проспект Победителей, 111",
+        "infoText2": "",
+        "infoText3": "Телефон bileti.by: +375 29 650 9999",
+        "infoText4": "Организатор: ООО Артист ПРО",
+        "infoText5": "г. Минск, ул. Интернациональная 16, 301 каб",
+        "infoTextPdf": "",
+        "section1": "Трибуна А. Сектор F",
+        "section2": "Трибуна А. Сек",
+        "row1": "RIDA 8",
+        "row2": "R 8",
+        "seat1": "KOHT 11",
+        "seat2": "K 11",
+        "priceGroup1": "цена",
+        "priceGroup2": "ц",
+        "ticketPrice": "0.01 РУБ",
+        "serviceFee": "Müügipunkti teenustasu 1.50 РУБ",
+        "extraFee": "Lisateenused 1.50 РУБ",
+        "totalText": "KOKKU",
+        "totalPrice": "3.01 РУБ",
+        "imageTop": "http:\/\/images.piletilevi.ee\/tickets\/top_1254993077_ylemine.jpg",
+        "imageLeft": "http:\/\/images.piletilevi.ee\/tickets\/left_1495522894_left_image.jpg",
+        "imageBottom": "http:\/\/images.piletilevi.ee\/tickets\/bottom_1254993107_alumine.jpg",
+        "saleDateTime": "25.05.2017 11:30"
+      }
+    ]
+  },
   "fiscalData": {
     "operation": "sale",
     "businessTransactionId": "13783374",
